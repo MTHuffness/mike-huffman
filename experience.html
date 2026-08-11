@@ -30,6 +30,17 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+            #chartHelper {
+                opacity: 0;
+                transform: translateY(-8px);
+                transition: opacity 0.4s ease, transform 0.4s ease;
+                pointer-events: none;
+            }
+            #chartHelper.visible {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
         </style>
     </head>
 
@@ -102,6 +113,14 @@
 
 <!-- Chart Container -->
 <div class="relative bg-gray-900 p-2 sm:p-4 rounded-lg border border-gray-700">
+    <!-- Helper popup shown on page load -->
+    <div id="chartHelper" class="absolute inset-x-0 top-3 z-10 flex justify-center px-4">
+        <div class="bg-gray-800 border border-amber-400 rounded-lg px-4 py-3 shadow-lg font-mono text-xs sm:text-sm flex items-center gap-3 max-w-full">
+            <span class="text-green-400 font-bold shrink-0">&gt;</span>
+            <span>TIP: Click any data point on the chart below to explore the details of each role.</span>
+            <button id="chartHelperDismiss" class="text-amber-400 hover:text-white font-bold shrink-0 px-1" aria-label="Dismiss tip">[x]</button>
+        </div>
+    </div>
     <canvas id="experienceChart"></canvas>
     <div id="chartTooltip" class="bg-gray-800 border border-amber-400 text-white text-sm rounded-lg p-2 shadow-lg font-mono"></div>
 </div>
@@ -129,6 +148,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const tooltipEl = document.getElementById('chartTooltip');
     const detailsContainer = document.getElementById('jobDetailsContainer');
     const initialMessage = document.getElementById('initial-message');
+
+    // --- Helper popup: shows on load, dismisses on click / [x] / timeout ---
+    const helperEl = document.getElementById('chartHelper');
+    const helperDismissBtn = document.getElementById('chartHelperDismiss');
+    let helperTimeout = null;
+
+    function dismissHelper() {
+        if (!helperEl || !helperEl.classList.contains('visible')) return;
+        helperEl.classList.remove('visible');
+        if (helperTimeout) clearTimeout(helperTimeout);
+        setTimeout(() => helperEl.remove(), 400); // remove after fade-out
+    }
+
+    setTimeout(() => {
+        helperEl.classList.add('visible');
+        helperTimeout = setTimeout(dismissHelper, 12000);
+    }, 600);
+
+    if (helperDismissBtn) helperDismissBtn.addEventListener('click', dismissHelper);
 
     const gradient = ctx.createLinearGradient(0, 0, 0, 300);
     gradient.addColorStop(0, 'rgba(0, 255, 0, 0.4)');
@@ -159,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
             maintainAspectRatio: false,
             onClick: (event, elements) => {
                 if (elements.length > 0) {
+                    dismissHelper();
                     const dataIndex = elements[0].index;
                     const job = jobData[dataIndex];
                     displayJobDetails(job);
@@ -249,15 +288,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             <div class="space-y-1 text-sm">
                                 <p class="flex items-center justify-center md:justify-start">
                                     <span class="text-green-400 mr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.28 1.465l-2.087.835a1.44 1.44 0 0 0-.339 1.836l3.413 3.413a1.44 1.44 0 0 0 1.836-.339l.835-2.087a1.44 1.44 0 0 1 1.465-.28l2.305 1.729a1.745 1.745 0 0 1 .163 2.61l-1.094 1.094a1.745 1.745 0 0 1-2.433.284l-4.244-2.122a1.745 1.745 0 0 1-1.385-1.385L.284 3.42a1.745 1.745 0 0 1 .284-2.433z"/></svg>
-                                    </span>
-                                    <a href="tel:719-291-6867" class="hover:text-amber-400 transition-colors">(719) 291-6867</a>
-                                </p>
-                                <p class="flex items-center justify-center md:justify-start">
-                                    <span class="text-green-400 mr-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zM16 4.697v7.104l-5.803-3.558z"/></svg>
                                     </span>
-                                    <a href="mailto:mhuffman88@ymail.com" class="hover:text-amber-400 transition-colors">mhuffman88@ymail.com</a>
+                                    <a href="mailto:careers.huffman@gmail.com" class="hover:text-amber-400 transition-colors">careers.huffman@gmail.com</a>
                                 </p>
                                  <p class="flex items-center justify-center md:justify-start">
                                     <span class="text-green-400 mr-2">
