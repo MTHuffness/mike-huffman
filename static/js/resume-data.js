@@ -42,6 +42,27 @@ const JOB_DATA = [
       "Conducted continuous financial analysis of the property portfolio, evaluating asset performance, cash flow, and operating revenue to provide data-driven strategic recommendations to shareholders.",
       "Advised on pricing strategies, lead conversion optimization, and operational efficiencies, directly contributing to revenue optimization and improved leasing performance.",
       "Collaborated with the management team on strategic initiatives, including hiring processes and the implementation of new operational workflows to increase overall firm effectiveness."
+    ],
+    "projects": [
+      {
+        "blurb": "Running a 120-unit portfolio means a constant stream of notices, renewals, and repairs — so I built a platform that absorbs the busywork. It doubles as a CRM, keeping every client's details and upcoming lease renewals in one place, and generates the documents that eat an office's day — demand notices, renters-insurance notices, small-balance letters — in seconds. Work orders are handled end-to-end: created in the app, dispatched to service providers who claim and complete them, with a finished record automatically generated and archived for document retention.",
+        "links": [
+          { "label": "pprecc.com", "url": "http://pprecc.com" }
+        ]
+      },
+      {
+        "blurb": "Every vacant unit is lost revenue, so each managed community gets a polished web presence that markets its apartments around the clock — showcasing the property to prospective renters and converting interest into showings.",
+        "links": [
+          { "label": "rentbirchwoodvillage.com", "url": "https://www.rentbirchwoodvillage.com" },
+          { "label": "rentpinewood.com", "url": "https://rentpinewood.com" }
+        ]
+      },
+      {
+        "blurb": "A lead-generation site for an affiliated notary and loan-signing business — a focused landing experience that captures prospects and follows up with them automatically.",
+        "links": [
+          { "label": "girlfridaynotary.com", "url": "http://girlfridaynotary.com" }
+        ]
+      }
     ]
   },
   {
@@ -69,6 +90,14 @@ const JOB_DATA = [
       "Designed and built a custom Django web application that ingests raw CMS plan data and distills it into clear, side-by-side comparisons — dramatically reducing time-to-recommendation when clients faced dozens of viable Medicare Advantage options.",
       "Engineered a provider-network lookup tool that went beyond standard directory searches: when a client's doctor appeared out-of-network, the tool cross-referenced the practice location to surface in-network colleagues at the same office or confirm facility-level network participation — resolving network concerns live on the call instead of requiring follow-ups.",
       "Translated complex CMS data and product rules into plain-language, actionable guidance, earning client trust in decisions with significant financial and healthcare consequences."
+    ],
+    "projects": [
+      {
+        "blurb": "Choosing among dozens of viable Medicare Advantage plans overwhelms clients — so I built a platform that ingests raw CMS plan data and distills it into clear, side-by-side comparisons, paired with a provider-network lookup that answers \"is my doctor covered?\" live on the call. Decisions that used to take days of follow-ups happen in a single conversation, and the platform now serves ~100 active insurance agents.",
+        "links": [
+          { "label": "promedvantage.com", "url": "http://promedvantage.com" }
+        ]
+      }
     ]
   },
   {
@@ -83,6 +112,16 @@ const JOB_DATA = [
       "Developed a custom Django/Python CRM with automated email and SMS communication, enabling management of 100+ prospective borrowers across every stage of the origination pipeline.",
       "Solved complex borrower scenarios by systematically evaluating the full product spectrum — including a client in financial distress placed successfully after exhausting conventional, FHA, and reverse-mortgage paths to identify a viable non-QM solution.",
       "Managed files end-to-end from initial LE to clear-to-close, coordinating underwriting, title, appraisal, and escrow while maintaining TRID/ECOA compliance on every disclosure."
+    ],
+    "projects": [
+      {
+        "blurb": "Borrowers say yes when they can see the math — so I built a Django application that generates prospect-specific marketing and pricing sheets on demand, backed by a financial analysis hub: a yield curve tool, loan comparison engine, reverse-mortgage breakdown, escrow calculator, refinance timing analyzer, and a closing cost estimator that reconciles figures from the initial Loan Estimate to the final Closing Disclosure — so nothing at the signing table comes as a surprise.",
+        "links": []
+      },
+      {
+        "blurb": "A custom Django/Python CRM purpose-built for the origination pipeline: automated email and SMS touchpoints keep 100+ prospective borrowers engaged and moving through every stage, from first contact to clear-to-close.",
+        "links": []
+      }
     ]
   }
 ];

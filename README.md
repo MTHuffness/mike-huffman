@@ -19,6 +19,10 @@ content that previously lived in the Django database now lives in this repo:
 ## Editing content
 
 - **Experience / skills:** edit `static/js/resume-data.js` directly. No build step.
+  Each job may carry a `projects` array (marketing blurb + links) shown under "Related
+  Projects" on `experience.html`; the "Skills Applied" chips there are derived
+  automatically by matching `"<position> at <employer>"` against each skill's
+  `experiences` list, so keep those strings in sync when renaming a role.
 - **Summary, projects, contact:** edit the corresponding HTML page.
 - Shared header/footer markup is duplicated across the five pages — if you change the nav
   or footer, apply the change to all of `index.html`, `experience.html`, `projects.html`,
