@@ -18,8 +18,9 @@
                 position: absolute;
                 pointer-events: none;
                 display: none;
+                width: max-content;
+                max-width: min(340px, 85vw);
                 transform: translate(-50%, -110%);
-                transition: opacity 0.2s ease, transform 0.2s ease;
             }
             .details-section {
                 opacity: 0;
@@ -221,7 +222,17 @@ document.addEventListener('DOMContentLoaded', function () {
                             <div class="text-xs text-gray-400">${job.dates}</div>
                         `;
                         tooltipEl.style.display = 'block';
-                        tooltipEl.style.left = tooltipModel.caretX + 'px';
+                        // Keep the tooltip inside the chart: clamp horizontally,
+                        // and flip below the point when there is no room above it.
+                        const containerWidth = context.chart.canvas.offsetWidth;
+                        const halfWidth = tooltipEl.offsetWidth / 2;
+                        const left = Math.max(halfWidth + 4,
+                            Math.min(tooltipModel.caretX, containerWidth - halfWidth - 4));
+                        const fitsAbove = tooltipModel.caretY - tooltipEl.offsetHeight - 14 > 0;
+                        tooltipEl.style.transform = fitsAbove
+                            ? 'translate(-50%, -110%)'
+                            : 'translate(-50%, 14px)';
+                        tooltipEl.style.left = left + 'px';
                         tooltipEl.style.top = tooltipModel.caretY + 'px';
                     }
                 }
