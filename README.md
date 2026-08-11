@@ -3,7 +3,7 @@
 Static personal profile site for Mike Huffman, CFA — styled as a financial data terminal.
 Hosted on GitHub Pages.
 
-**Live site:** https://mthuffness.github.io/mike-huffman/
+**Live site:** https://mikehuffman.info/ (also at https://mthuffness.github.io/mike-huffman/)
 
 This is the static successor to the original Django version of the site. All resume
 content that previously lived in the Django database now lives in this repo:
@@ -51,6 +51,17 @@ One-time setup, already done for this repo (for reference if recreating it):
    (or on github.com: Settings → Pages → Deploy from a branch → `main` / `/ (root)`)
 3. The `.nojekyll` file at the repo root tells Pages to serve files as-is instead of
    running them through Jekyll — keep it.
+
+### Custom domain
+
+The site is served at `mikehuffman.info` via the `CNAME` file in the repo root plus the
+custom-domain setting in Settings → Pages. DNS is hosted at GoDaddy:
+
+- Apex `@` A records → GitHub Pages IPs: `185.199.108.153`, `185.199.109.153`,
+  `185.199.110.153`, `185.199.111.153`
+- `www` CNAME → `mthuffness.github.io` (GitHub redirects www to the apex domain)
+- "Enforce HTTPS" is enabled in Settings → Pages (GitHub provisions the certificate
+  automatically once DNS points at the IPs above).
 
 ## Pages
 
