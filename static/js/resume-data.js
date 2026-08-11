@@ -46,9 +46,7 @@ const JOB_DATA = [
     "projects": [
       {
         "blurb": "Running a 120-unit portfolio means a constant stream of notices, renewals, and repairs — so I built a platform that absorbs the busywork. It doubles as a CRM, keeping every client's details and upcoming lease renewals in one place, and generates the documents that eat an office's day — demand notices, renters-insurance notices, small-balance letters — in seconds. Work orders are handled end-to-end: created in the app, dispatched to service providers who claim and complete them, with a finished record automatically generated and archived for document retention.",
-        "links": [
-          { "label": "pprecc.com", "url": "http://pprecc.com" }
-        ]
+        "links": []
       },
       {
         "blurb": "Every vacant unit is lost revenue, so each managed community gets a polished web presence that markets its apartments around the clock — showcasing the property to prospective renters and converting interest into showings.",
@@ -94,9 +92,7 @@ const JOB_DATA = [
     "projects": [
       {
         "blurb": "Choosing among dozens of viable Medicare Advantage plans overwhelms clients — so I built a platform that ingests raw CMS plan data and distills it into clear, side-by-side comparisons, paired with a provider-network lookup that answers \"is my doctor covered?\" live on the call. Decisions that used to take days of follow-ups happen in a single conversation, and the platform now serves ~100 active insurance agents.",
-        "links": [
-          { "label": "promedvantage.com", "url": "http://promedvantage.com" }
-        ]
+        "links": []
       }
     ]
   },

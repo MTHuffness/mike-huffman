@@ -83,22 +83,45 @@
     <!-- Responsive Grid for Project Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Card 1: ProMedVantage -->
+        <!-- Card 1: MTHuff Morpheus -->
+        <div class="bg-gray-900 border border-gray-700 rounded-lg overflow-hidden flex flex-col">
+            <div class="p-4 border-b border-gray-700">
+                <h2 class="text-xl font-bold text-amber-400">MTHuff Morpheus</h2>
+                <p class="text-sm text-gray-400 font-mono">Real-Time LLM Market Adjudication</p>
+            </div>
+
+            <div class="w-full h-48 bg-gray-800/50 flex items-center justify-center p-4">
+                 <img src="static/images/mthuff_red_trans.png"
+                      alt="MTHuff Morpheus Logo"
+                      class="max-h-full max-w-full object-contain">
+            </div>
+
+            <div class="p-4 flex-grow">
+                <p class="text-sm text-gray-300 mb-4">
+                    A real-time LLM decision system for market-regime analysis, engineered with the rigor of a test suite — a defined ground truth, a null hypothesis, and a measured ceiling.
+                </p>
+                <ul class="space-y-2 text-sm list-none pl-0">
+                    <li class="flex items-start"><span class="text-amber-400 mr-3 mt-1">▶</span><span><strong>Measurable, Causal Evaluation:</strong> A walk-forward harness replays market sessions bar-by-bar while an LLM adjudicates regime shifts strictly causally (no lookahead), scored against hand-labeled ground truth — 0.81&ndash;0.84 label occupancy vs. a 0.62 mechanical baseline, roughly 90% of the ceiling established by an oracle adjudicator.</span></li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-3 mt-1">▶</span><span><strong>Cost-Engineered Eval Loop (100&times; Cheaper Iteration):</strong> Distills each session into ~35 pivotal decision points, rebuilds them as byte-identical single-turn prompts, and batch-grades them for ~$1/session vs. $7 for a full run — plus a free tier using transcript replay and local-model adjudication.</span></li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-3 mt-1">▶</span><span><strong>Doctrine Compiler:</strong> Every human annotation is automatically compiled (~1&cent; a pass) into durable, structured rules with provenance and hash-based change tracking, feeding the production system prompt as a versioned, admin-reviewable rulebook — expert knowledge flows into model behavior with zero manual prompt editing.</span></li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-3 mt-1">▶</span><span><strong>Reproducibility &amp; Regression Infrastructure:</strong> Every adjudicator call is transcript-logged, runs replay offline bit-identically, the baseline is frozen and regression-checked after any harness change, and failed eval moments re-run in isolation with controls.</span></li>
+                    <li class="flex items-start"><span class="text-amber-400 mr-3 mt-1">▶</span><span><strong>End-to-End Outcome Measurement:</strong> A trade-simulation engine walks the full trading methodology over any model-generated timeline, converting classification accuracy into dollars-and-cents P&amp;L per session — including an oracle ceiling quantifying each day's maximum tradability.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 2: ProMedVantage -->
         <div class="bg-gray-900 border border-gray-700 rounded-lg overflow-hidden flex flex-col">
             <div class="p-4 border-b border-gray-700">
                 <h2 class="text-xl font-bold text-amber-400">ProMedVantage</h2>
-                <p class="text-sm text-gray-400 font-mono">
-                    <a href="http://promedvantage.com" target="_blank"
-                       rel="noopener noreferrer" class="hover:text-amber-300 transition-colors">promedvantage.com</a>
-                </p>
+                <p class="text-sm text-gray-400 font-mono">Medicare Plan Intelligence Platform</p>
             </div>
 
-            <a href="http://promedvantage.com" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity duration-300">
-                 <img src="static/images/pmv.jpg"
-                      alt="ProMedVantage Application Screenshot"
-                      class="w-full h-48 object-cover"
-                      onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a1a1a/d4d4d4?text=Image+Not+Found';">
-            </a>
+            <div class="w-full h-48 bg-gray-800/50 flex items-center justify-center p-4">
+                 <img src="static/images/favicon_transparent.ico"
+                      alt="ProMedVantage Logo"
+                      class="max-h-full max-w-full object-contain">
+            </div>
 
             <div class="p-4 flex-grow">
                 <p class="text-sm text-gray-300 mb-4">
@@ -112,19 +135,17 @@
             </div>
         </div>
 
-        <!-- Card 2: Pikes Peak Property Management -->
+        <!-- Card 3: Pikes Peak Property Management -->
         <div class="bg-gray-900 border border-gray-700 rounded-lg overflow-hidden flex flex-col">
             <div class="p-4 border-b border-gray-700">
                 <h2 class="text-xl font-bold text-amber-400">Pikes Peak Property Management</h2>
-                 <p class="text-sm text-gray-400 font-mono"><a href="http://pprecc.com" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 transition-colors">pprecc.com</a></p>
+                 <p class="text-sm text-gray-400 font-mono">Property Management ERP &amp; CRM</p>
             </div>
 
-            <a href="http://pprecc.com" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity duration-300">
-                 <img src="static/images/pprecc.jpg"
-                      alt="Pikes Peak Property Management App Screenshot"
-                      class="w-full h-48 object-cover"
-                      onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a1a1a/d4d4d4?text=Image+Not+Found';">
-            </a>
+            <img src="static/images/pprecc.jpg"
+                 alt="Pikes Peak Property Management App Screenshot"
+                 class="w-full h-48 object-cover"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/1a1a1a/d4d4d4?text=Image+Not+Found';">
 
             <div class="p-4 flex-grow">
                 <p class="text-sm text-gray-300 mb-4">
@@ -190,7 +211,7 @@
             </div>
         </div>
 
-        <!-- Card 3: Girl Friday Notary -->
+        <!-- Card: Girl Friday Notary -->
         <div class="bg-gray-900 border border-gray-700 rounded-lg overflow-hidden flex flex-col">
             <div class="p-4 border-b border-gray-700">
                 <h2 class="text-xl font-bold text-amber-400">Girl Friday Notary</h2>
