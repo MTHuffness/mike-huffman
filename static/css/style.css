@@ -1,0 +1,115 @@
+/* --- Terminal Theme CSS --- */
+:root {
+    --bg-color: #1a1a1a; /* Using header-bg for a dark grey as requested */
+    --text-color: #d4d4d4; /* Off-white/light gray */
+    --primary-accent: #ffa500; /* Bright Amber/Orange */
+    --secondary-accent: #00ff00; /* Bright Green */
+    --header-bg: #1a1a1a;
+    --border-color: #333333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+}
+
+/* Custom scrollbar for a more integrated look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--header-bg);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-accent);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffc107; /* Brighter amber on hover */
+}
+
+/* Custom selection color */
+::selection {
+    background-color: var(--primary-accent);
+    color: var(--bg-color);
+}
+
+.terminal-header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Desktop Navigation Link Styling */
+.nav-link {
+    color: var(--text-color);
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 0.25rem; /* Added for consistency */
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--bg-color);
+    background-color: var(--primary-accent);
+}
+
+/* Mobile Navigation Link Styling */
+.mobile-nav-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: all 0.2s ease-in-out;
+}
+.mobile-nav-link:hover {
+    background-color: #333;
+    color: var(--text-color);
+}
+.mobile-nav-link.active {
+    background-color: var(--header-bg);
+    color: var(--primary-accent);
+    font-weight: bold;
+}
+
+
+.main-content {
+    border: 1px solid var(--border-color);
+    background-color: rgba(26, 26, 26, 0.5); /* Slightly transparent background */
+}
+
+h1, h2, h3 {
+    color: var(--primary-accent);
+    font-weight: 700;
+}
+
+/* Blinking cursor effect for titles */
+.blinking-cursor::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Style for the headshot */
+.headshot {
+    border: 2px solid var(--primary-accent);
+    filter: grayscale(80%);
+    transition: all 0.3s ease;
+}
+.headshot:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <title>Contact - Mike Huffman, CFA®</title>
+        <link rel="stylesheet" href="static/css/style.css">
+
+    </head>
+
+    <body class="antialiased bg-gray-900 text-gray-200">
+        <div id="app-wrapper" class="min-h-screen p-2 sm:p-4 flex flex-col">
+
+            <!-- HEADER / NAVIGATION -->
+            <header class="terminal-header p-3 mb-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div class="container mx-auto flex justify-between items-center">
+                    <!-- Left Side: Mobile Menu Button and Name -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Mobile Menu Button (Hamburger) -->
+                        <div class="md:hidden">
+                            <button id="mobile-menu-button" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-400">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="h-6 w-6 block" id="hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                                <svg class="h-6 w-6 hidden" id="close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Name and Title -->
+                        <div class="text-xl sm:text-2xl font-bold text-amber-400">
+                            <a href="index.html">MIKE HUFFMAN<span class="text-green-400">, CFA</span></a>
+                        </div>
+                    </div>
+
+                    <!-- Center: Desktop Navigation Links -->
+                    <nav class="hidden md:flex items-center space-x-2 lg:space-x-4 text-xs lg:text-sm">
+                        <a href="index.html" class="nav-link">1&nbsp;&nbsp;Summary</a>
+                        <a href="experience.html" class="nav-link">2&nbsp;&nbsp;Experience</a>
+                        <a href="projects.html" class="nav-link">3&nbsp;&nbsp;Projects</a>
+                        <a href="skills.html" class="nav-link">4&nbsp;&nbsp;Skills</a>
+                        <a href="contact.html" class="nav-link active">5&nbsp;&nbsp;Contact</a>
+                    </nav>
+
+                    <!-- Right Side: Live Clock -->
+                    <div class="flex items-center">
+                        <div id="live-clock" class="text-xs sm:text-sm font-mono text-right">
+                            <div id="time" class="text-green-400">12:00:00 PM</div>
+                            <div id="date" class="text-amber-400">YYYY-MM-DD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu, hidden by default -->
+                <div id="mobile-menu" class="hidden md:hidden mt-3">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="index.html" class="mobile-nav-link">1&nbsp;&nbsp;Summary</a>
+                        <a href="experience.html" class="mobile-nav-link">2&nbsp;&nbsp;Experience</a>
+                        <a href="projects.html" class="mobile-nav-link">3&nbsp;&nbsp;Projects</a>
+                        <a href="skills.html" class="mobile-nav-link">4&nbsp;&nbsp;Skills</a>
+                        <a href="contact.html" class="mobile-nav-link active">5&nbsp;&nbsp;Contact</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content container mx-auto p-4 sm:p-6 rounded-lg flex-grow bg-gray-900 border border-gray-700">
+
+<!-- Page Title -->
+<div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl md:text-3xl font-bold blinking-cursor">
+        Contact &amp; Network
+    </h1>
+    <span class="text-sm font-mono text-green-400"># Function: CONTACT</span>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Left Column: Direct Contact Info -->
+    <div>
+        <h2 class="text-xl font-bold border-b-2 border-amber-400 pb-1 mb-4">Direct Connection</h2>
+        <div class="space-y-4 font-mono text-base">
+            <div class="flex items-center">
+                <span class="text-green-400 mr-4 w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zM16 4.697v7.104l-5.803-3.558z"/></svg>
+                </span>
+                <a href="mailto:mhuffman88@ymail.com" class="hover:text-amber-400 transition-colors">mhuffman88@ymail.com</a>
+            </div>
+            <div class="flex items-center">
+                <span class="text-green-400 mr-4 w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.28 1.465l-2.087.835a1.44 1.44 0 0 0-.339 1.836l3.413 3.413a1.44 1.44 0 0 0 1.836-.339l.835-2.087a1.44 1.44 0 0 1 1.465-.28l2.305 1.729a1.745 1.745 0 0 1 .163 2.61l-1.094 1.094a1.745 1.745 0 0 1-2.433.284l-4.244-2.122a1.745 1.745 0 0 1-1.385-1.385L.284 3.42a1.745 1.745 0 0 1 .284-2.433z"/></svg>
+                </span>
+                <a href="tel:719-291-6867" class="hover:text-amber-400 transition-colors">(719) 291-6867</a>
+            </div>
+            <div class="flex items-center">
+                <span class="text-green-400 mr-4 w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                </span>
+                <span>Aurora, CO 80013</span>
+            </div>
+        </div>
+    </div>
+    <!-- Right Column: Professional Network -->
+    <div>
+        <h2 class="text-xl font-bold border-b-2 border-amber-400 pb-1 mb-4">Professional Network</h2>
+        <div class="space-y-4 font-mono text-base">
+             <a href="https://www.linkedin.com/in/mike-huffman/" target="_blank" rel="noopener noreferrer" class="flex items-center group">
+                <span class="text-green-400 mr-4 w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.325 0-1.934.721-2.261 1.284h.016v-1.1h-2.4v7.225z"/></svg>
+                </span>
+                <span class="group-hover:text-amber-400 transition-colors">LinkedIn Profile</span>
+             </a>
+             <a href="https://github.com/MTHuffness" target="_blank" rel="noopener noreferrer" class="flex items-center group">
+                <span class="text-green-400 mr-4 w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                </span>
+                <span class="group-hover:text-amber-400 transition-colors">GitHub Profile</span>
+             </a>
+        </div>
+    </div>
+</div>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="container mx-auto mt-6">
+                 <div class="border border-gray-700 rounded-lg p-4 bg-gray-900">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <!-- Headshot -->
+                        <div class="flex-shrink-0">
+                            <img src="static/images/head_shot.jpg"
+                                 alt="Mike Huffman Headshot"
+                                 class="w-32 h-32 rounded-full object-cover headshot"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/128x128/0d0d0d/d4d4d4?text=Error';">
+                        </div>
+                        <!-- Contact Info -->
+                        <div class="font-mono text-center md:text-left">
+                            <h3 class="text-lg text-amber-400 font-bold mb-2">Contact Information</h3>
+                            <div class="space-y-1 text-sm">
+                                <p class="flex items-center justify-center md:justify-start">
+                                    <span class="text-green-400 mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.28 1.465l-2.087.835a1.44 1.44 0 0 0-.339 1.836l3.413 3.413a1.44 1.44 0 0 0 1.836-.339l.835-2.087a1.44 1.44 0 0 1 1.465-.28l2.305 1.729a1.745 1.745 0 0 1 .163 2.61l-1.094 1.094a1.745 1.745 0 0 1-2.433.284l-4.244-2.122a1.745 1.745 0 0 1-1.385-1.385L.284 3.42a1.745 1.745 0 0 1 .284-2.433z"/></svg>
+                                    </span>
+                                    <a href="tel:719-291-6867" class="hover:text-amber-400 transition-colors">(719) 291-6867</a>
+                                </p>
+                                <p class="flex items-center justify-center md:justify-start">
+                                    <span class="text-green-400 mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zM16 4.697v7.104l-5.803-3.558z"/></svg>
+                                    </span>
+                                    <a href="mailto:mhuffman88@ymail.com" class="hover:text-amber-400 transition-colors">mhuffman88@ymail.com</a>
+                                </p>
+                                 <p class="flex items-center justify-center md:justify-start">
+                                    <span class="text-green-400 mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                                    </span>
+                                    <span>Aurora, CO 80013</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright Notice -->
+                <div class="text-center text-xs text-gray-500 mt-4 pb-2">
+                    <p>&copy; <span id="copyright-year">2026</span> Mike Huffman. All rights reserved.</p>
+                    <p>Styled to replicate a financial data terminal.</p>
+                </div>
+            </footer>
+
+        </div>
+
+        <script>
+            // Live Clock Script
+            function updateClock() {
+                const now = new Date();
+                const timeEl = document.getElementById('time');
+                const dateEl = document.getElementById('date');
+                if(timeEl && dateEl) {
+                    let hours = now.getHours();
+                    const minutes = now.getMinutes().toString().padStart(2, '0');
+                    const seconds = now.getSeconds().toString().padStart(2, '0');
+                    const ampm = hours >= 12 ? 'PM' : 'AM';
+                    hours = hours % 12;
+                    hours = hours ? hours : 12;
+                    timeEl.textContent = `${hours.toString().padStart(2, ' ')}:${minutes}:${seconds} ${ampm}`;
+                    const year = now.getFullYear();
+                    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+                    const day = now.getDate().toString().padStart(2, '0');
+                    dateEl.textContent = `${year}-${month}-${day}`;
+                }
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+
+            // Copyright year
+            const yearEl = document.getElementById('copyright-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle Script
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+        </script>
+    </body>
+</html>

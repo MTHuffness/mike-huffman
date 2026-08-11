@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <title>Competency Matrix - Mike Huffman, CFA®</title>
+        <link rel="stylesheet" href="static/css/style.css">
+
+    </head>
+
+    <body class="antialiased bg-gray-900 text-gray-200">
+        <div id="app-wrapper" class="min-h-screen p-2 sm:p-4 flex flex-col">
+
+            <!-- HEADER / NAVIGATION -->
+            <header class="terminal-header p-3 mb-4 rounded-lg bg-gray-900 border border-gray-700">
+                <div class="container mx-auto flex justify-between items-center">
+                    <!-- Left Side: Mobile Menu Button and Name -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Mobile Menu Button (Hamburger) -->
+                        <div class="md:hidden">
+                            <button id="mobile-menu-button" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-400">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="h-6 w-6 block" id="hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                                <svg class="h-6 w-6 hidden" id="close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Name and Title -->
+                        <div class="text-xl sm:text-2xl font-bold text-amber-400">
+                            <a href="index.html">MIKE HUFFMAN<span class="text-green-400">, CFA</span></a>
+                        </div>
+                    </div>
+
+                    <!-- Center: Desktop Navigation Links -->
+                    <nav class="hidden md:flex items-center space-x-2 lg:space-x-4 text-xs lg:text-sm">
+                        <a href="index.html" class="nav-link">1&nbsp;&nbsp;Summary</a>
+                        <a href="experience.html" class="nav-link">2&nbsp;&nbsp;Experience</a>
+                        <a href="projects.html" class="nav-link">3&nbsp;&nbsp;Projects</a>
+                        <a href="skills.html" class="nav-link active">4&nbsp;&nbsp;Skills</a>
+                        <a href="contact.html" class="nav-link">5&nbsp;&nbsp;Contact</a>
+                    </nav>
+
+                    <!-- Right Side: Live Clock -->
+                    <div class="flex items-center">
+                        <div id="live-clock" class="text-xs sm:text-sm font-mono text-right">
+                            <div id="time" class="text-green-400">12:00:00 PM</div>
+                            <div id="date" class="text-amber-400">YYYY-MM-DD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu, hidden by default -->
+                <div id="mobile-menu" class="hidden md:hidden mt-3">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="index.html" class="mobile-nav-link">1&nbsp;&nbsp;Summary</a>
+                        <a href="experience.html" class="mobile-nav-link">2&nbsp;&nbsp;Experience</a>
+                        <a href="projects.html" class="mobile-nav-link">3&nbsp;&nbsp;Projects</a>
+                        <a href="skills.html" class="mobile-nav-link active">4&nbsp;&nbsp;Skills</a>
+                        <a href="contact.html" class="mobile-nav-link">5&nbsp;&nbsp;Contact</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content container mx-auto p-4 sm:p-6 rounded-lg flex-grow bg-gray-900 border border-gray-700">
+
+<style>
+    .skill-btn {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid var(--border-color);
+    }
+    .skill-btn:hover {
+        background-color: var(--primary-accent);
+        color: var(--bg-color);
+        transform: translateY(-2px);
+    }
+    .skill-btn.active {
+        background-color: var(--secondary-accent);
+        color: var(--bg-color);
+        font-weight: bold;
+        border-color: var(--secondary-accent);
+    }
+    #skillDetailsContainer {
+        min-height: 200px;
+    }
+    .details-content {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeIn 0.5s forwards;
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<!-- Page Title -->
+<div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl md:text-3xl font-bold blinking-cursor">
+        Competency Matrix
+    </h1>
+    <span class="text-sm font-mono text-green-400"># Function: SKILLS</span>
+</div>
+
+<!-- Grid for Skills and Details -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Left Column: Skill Selection (rendered from resume data) -->
+    <div id="skillCategories" class="lg:col-span-2 space-y-6"></div>
+
+    <!-- Right Column: Details Display -->
+    <div class="lg:col-span-1">
+        <div id="skillDetailsContainer" class="bg-gray-900 border border-gray-700 rounded-lg p-4 sticky top-4">
+            <div id="initial-skill-message" class="text-center text-gray-400 font-mono flex items-center justify-center h-full">
+                <p>&lt; Select a skill to see where it was applied &gt;</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Resume data (exported from the retired Django database) -->
+<script src="static/js/resume-data.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const categoriesContainer = document.getElementById('skillCategories');
+    const detailsContainer = document.getElementById('skillDetailsContainer');
+    const initialMessage = document.getElementById('initial-skill-message');
+
+    // Render the category sections and skill buttons from SKILLS_BY_CATEGORY
+    for (const [category, skills] of Object.entries(SKILLS_BY_CATEGORY)) {
+        const section = document.createElement('div');
+        const heading = document.createElement('h2');
+        heading.className = 'text-xl font-bold border-b-2 border-amber-400 pb-1 mb-3';
+        heading.textContent = category;
+        const wrap = document.createElement('div');
+        wrap.className = 'flex flex-wrap gap-2';
+        skills.forEach(skill => {
+            const btn = document.createElement('button');
+            btn.className = 'skill-btn bg-gray-900 text-text-color text-sm font-mono rounded-md px-3 py-1';
+            btn.textContent = skill.name;
+            btn.dataset.skillName = skill.name;
+            btn.dataset.experiences = skill.experiences.join(';');
+            wrap.appendChild(btn);
+        });
+        section.appendChild(heading);
+        section.appendChild(wrap);
+        categoriesContainer.appendChild(section);
+    }
+
+    const skillButtons = document.querySelectorAll('.skill-btn');
+    skillButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            skillButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const skillName = button.dataset.skillName;
+            const experiences = button.dataset.experiences.split(';').filter(e => e);
+
+            if(initialMessage) initialMessage.style.display = 'none';
+
+            let detailsHtml = `
+                <div class="details-content">
+                    <h3 class="text-lg font-bold text-amber-400 mb-2">${skillName}</h3>
+                    <p class="text-sm text-gray-300 mb-3">Applied in the following roles:</p>
+                    <ul class="space-y-2 list-none pl-0 font-mono text-xs">
+            `;
+
+            if (experiences.length > 0) {
+                experiences.forEach(exp => {
+                    detailsHtml += `<li class="flex items-start"><span class="text-green-400 mr-2 mt-1">▶</span><span>${exp}</span></li>`;
+                });
+            } else {
+                detailsHtml += `<li>No specific experiences linked.</li>`;
+            }
+
+            detailsHtml += `</ul></div>`;
+            detailsContainer.innerHTML = detailsHtml;
+        });
+    });
+});
+</script>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="container mx-auto mt-6">
+                 <div class="border border-gray-700 rounded-lg p-4 bg-gray-900">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <!-- Headshot -->
+                        <div class="flex-shrink-0">
+                            <img src="static/images/head_shot.jpg"
+                                 alt="Mike Huffman Headshot"
+                                 class="w-32 h-32 rounded-full object-cover headshot"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/128x128/0d0d0d/d4d4d4?text=Error';">
+                        </div>
+                        <!-- Contact Info -->
+                        <div class="font-mono text-center md:text-left">
+                            <h3 class="text-lg text-amber-400 font-bold mb-2">Contact Information</h3>
+                            <div class="space-y-1 text-sm">
+                                <p class="flex items-center justify-center md:justify-start">
+                                    <span class="text-green-400 mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.28 1.465l-2.087.835a1.44 1.44 0 0 0-.339 1.836l3.413 3.413a1.44 1.44 0 0 0 1.836-.339l.835-2.087a1.44 1.44 0 0 1 1.465-.28l2.305 1.729a1.745 1.745 0 0 1 .163 2.61l-1.094 1.094a1.745 1.745 0 0 1-2.433.284l-4.244-2.122a1.745 1.745 0 0 1-1.385-1.385L.284 3.42a1.745 1.745 0 0 1 .284-2.433z"/></svg>
+                                    </span>
+                                    <a href="tel:719-291-6867" class="hover:text-amber-400 transition-colors">(719) 291-6867</a>
+                                </p>
+                                <p class="flex items-center justify-center md:justify-start">
+                                    <span class="text-green-400 mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zM16 4.697v7.104l-5.803-3.558z"/></svg>
+                                    </span>
+                                    <a href="mailto:mhuffman88@ymail.com" class="hover:text-amber-400 transition-colors">mhuffman88@ymail.com</a>
+                                </p>
+                                 <p class="flex items-center justify-center md:justify-start">
+                                    <span class="text-green-400 mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                                    </span>
+                                    <span>Aurora, CO 80013</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright Notice -->
+                <div class="text-center text-xs text-gray-500 mt-4 pb-2">
+                    <p>&copy; <span id="copyright-year">2026</span> Mike Huffman. All rights reserved.</p>
+                    <p>Styled to replicate a financial data terminal.</p>
+                </div>
+            </footer>
+
+        </div>
+
+        <script>
+            // Live Clock Script
+            function updateClock() {
+                const now = new Date();
+                const timeEl = document.getElementById('time');
+                const dateEl = document.getElementById('date');
+                if(timeEl && dateEl) {
+                    let hours = now.getHours();
+                    const minutes = now.getMinutes().toString().padStart(2, '0');
+                    const seconds = now.getSeconds().toString().padStart(2, '0');
+                    const ampm = hours >= 12 ? 'PM' : 'AM';
+                    hours = hours % 12;
+                    hours = hours ? hours : 12;
+                    timeEl.textContent = `${hours.toString().padStart(2, ' ')}:${minutes}:${seconds} ${ampm}`;
+                    const year = now.getFullYear();
+                    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+                    const day = now.getDate().toString().padStart(2, '0');
+                    dateEl.textContent = `${year}-${month}-${day}`;
+                }
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+
+            // Copyright year
+            const yearEl = document.getElementById('copyright-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle Script
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    hamburgerIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+        </script>
+    </body>
+</html>
