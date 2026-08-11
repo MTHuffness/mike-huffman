@@ -117,7 +117,8 @@ const SKILLS_BY_CATEGORY = {
     {
       "name": "Database Management",
       "experiences": [
-        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC",
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -127,9 +128,21 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Email / SMS Automation",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
       "name": "Eurodollar Futures",
       "experiences": [
         "Futures Trader at Eldorado Trading"
+      ]
+    },
+    {
+      "name": "Financial Calculator & Tool Development",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -159,6 +172,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Closing Cost Estimation & Reconciliation",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
       "name": "Credit Analysis",
       "experiences": [
         "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct"
@@ -183,6 +202,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Escrow Calculation",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
       "name": "Financial Statement Analysis",
       "experiences": [
         "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct"
@@ -198,6 +223,12 @@ const SKILLS_BY_CATEGORY = {
       "name": "Lead Conversion Analysis",
       "experiences": [
         "Strategic Consultant at Pikes Peak Property Management"
+      ]
+    },
+    {
+      "name": "Loan Comparison Modeling",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -225,6 +256,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Refinance Break-Even Modeling",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
       "name": "Risk Assessment",
       "experiences": [
         "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct"
@@ -234,6 +271,13 @@ const SKILLS_BY_CATEGORY = {
       "name": "Technical Analysis",
       "experiences": [
         "Branch Stock Broker at Scottrade"
+      ]
+    },
+    {
+      "name": "Yield Curve Analysis",
+      "experiences": [
+        "Futures Trader at Eldorado Trading",
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     }
   ],
@@ -289,6 +333,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Condition Resolution",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
       "name": "Entrepreneurship",
       "experiences": [
         "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
@@ -324,9 +374,21 @@ const SKILLS_BY_CATEGORY = {
       "experiences": [
         "Futures Trader at Eldorado Trading"
       ]
+    },
+    {
+      "name": "Underwriting, Title, Appraisal & Escrow Coordination",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
     }
   ],
   "Financial": [
+    {
+      "name": "ECOA & Federal Disclosure Timelines",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
     {
       "name": "Futures Trading",
       "experiences": [
@@ -353,7 +415,7 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
-      "name": "Mortgage Loan Origination (Conventional, FHA/VA, HELOC, Non-QM)",
+      "name": "Mortgage Loan Origination (Conventional, FHA, VA, Jumbo, Non-QM, DSCR, HELOC, Reverse)",
       "experiences": [
         "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
@@ -368,6 +430,12 @@ const SKILLS_BY_CATEGORY = {
       "name": "Product Expertise (Medicare)",
       "experiences": [
         "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
+      "name": "Rate & Pricing Analysis",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -389,7 +457,27 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
-      "name": "TRID / ECOA Compliance",
+      "name": "TRID Compliance (LE → CD Tolerance Requirements)",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
+      "name": "Wholesale Lending / Multi-Investor Pricing",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    }
+  ],
+  "Licensing": [
+    {
+      "name": "NMLS-Licensed Mortgage Loan Originator (NMLS ID 2699104)",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
+      "name": "SAFE Act / State Licensing Exam — Passed",
       "experiences": [
         "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
