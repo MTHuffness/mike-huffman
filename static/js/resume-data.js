@@ -70,6 +70,20 @@ const JOB_DATA = [
       "Excelled in a high-volume, consultative sales environment, building rapport with and guiding 50-60 clients monthly through complex Medicare decisions.",
       "Consistently achieved monthly sales targets by translating complex CMS data and product information into clear, actionable advice for clients."
     ]
+  },
+  {
+    "id": 6,
+    "employer": "West Capital Lending",
+    "position": "Branch Manager | Mortgage Loan Originator",
+    "dates": "Jul 2025 – Dec 2025",
+    "value": 950,
+    "details": [
+      "Closed approximately $2M in funded loan volume within first 60 days, spanning conventional, FHA/VA, HELOC, and non-QM products.",
+      "Designed and built a custom Django web application generating prospect-specific marketing and pricing sheets, plus a financial analysis hub featuring a yield curve tool, loan comparison engine, reverse mortgage breakdown, escrow calculator, refinance timing analyzer, and a closing cost estimator reconciling figures from the initial Loan Estimate through the final Closing Disclosure — eliminating borrower surprises at signing.",
+      "Developed a custom Django/Python CRM with automated email and SMS communication, enabling management of 100+ prospective borrowers across every stage of the origination pipeline.",
+      "Solved complex borrower scenarios by systematically evaluating the full product spectrum — including a client in financial distress placed successfully after exhausting conventional, FHA, and reverse-mortgage paths to identify a viable non-QM solution.",
+      "Managed files end-to-end from initial LE to clear-to-close, coordinating underwriting, title, appraisal, and escrow while maintaining TRID/ECOA compliance on every disclosure."
+    ]
   }
 ];
 
@@ -88,15 +102,28 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "CRM Development & Automation",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
       "name": "Custom Application Development",
       "experiences": [
-        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC",
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
       "name": "Database Management",
       "experiences": [
         "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
+      "name": "Django / Python Development",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -117,6 +144,12 @@ const SKILLS_BY_CATEGORY = {
       "name": "Asset Performance Analysis",
       "experiences": [
         "Strategic Consultant at Pikes Peak Property Management"
+      ]
+    },
+    {
+      "name": "Borrower Scenario Analysis",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -224,6 +257,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Marketing Automation",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
       "name": "Sales & Lead Nurturing",
       "experiences": [
         "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct"
@@ -237,6 +276,12 @@ const SKILLS_BY_CATEGORY = {
     }
   ],
   "Management & Communication": [
+    {
+      "name": "Branch Management",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
     {
       "name": "Client Relationship Management",
       "experiences": [
@@ -252,7 +297,8 @@ const SKILLS_BY_CATEGORY = {
     {
       "name": "High-Volume Pipeline Management",
       "experiences": [
-        "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct"
+        "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct",
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -302,7 +348,14 @@ const SKILLS_BY_CATEGORY = {
     {
       "name": "Loan Structuring",
       "experiences": [
-        "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct"
+        "Loan Consultant (Auto Finance) at AutoPay / Auto Approve / iLending Direct",
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
+      "name": "Mortgage Loan Origination (Conventional, FHA/VA, HELOC, Non-QM)",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
     {
@@ -333,6 +386,12 @@ const SKILLS_BY_CATEGORY = {
       "name": "Shareholder Reporting",
       "experiences": [
         "Strategic Consultant at Pikes Peak Property Management"
+      ]
+    },
+    {
+      "name": "TRID / ECOA Compliance",
+      "experiences": [
+        "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     }
   ]
