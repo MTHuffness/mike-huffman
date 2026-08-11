@@ -3,6 +3,8 @@
 Static personal profile site for Mike Huffman, CFA — styled as a financial data terminal.
 Hosted on GitHub Pages.
 
+**Live site:** https://mthuffness.github.io/mike-huffman/
+
 This is the static successor to the original Django version of the site. All resume
 content that previously lived in the Django database now lives in this repo:
 
@@ -28,6 +30,27 @@ content that previously lived in the Django database now lives in this repo:
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
+
+## Deployment (GitHub Pages)
+
+The site is served directly from the `main` branch root by GitHub Pages — there is no
+build step. Pushing to `main` redeploys the site automatically (allow a minute or two
+for the Pages build to finish).
+
+```sh
+git add -A
+git commit -m "Update site"
+git push origin main
+```
+
+One-time setup, already done for this repo (for reference if recreating it):
+
+1. Create the repo and push: `gh repo create MTHuffness/mike-huffman --public --source . --push`
+2. Enable Pages from the `main` branch root:
+   `gh api -X POST repos/MTHuffness/mike-huffman/pages -f "source[branch]=main" -f "source[path]=/"`
+   (or on github.com: Settings → Pages → Deploy from a branch → `main` / `/ (root)`)
+3. The `.nojekyll` file at the repo root tells Pages to serve files as-is instead of
+   running them through Jekyll — keep it.
 
 ## Pages
 
