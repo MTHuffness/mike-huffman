@@ -65,10 +65,10 @@ const JOB_DATA = [
     "dates": "Jan 2024 – Mar 2025",
     "value": 750,
     "details": [
-      "Designed, developed, and launched a custom digital application to streamline the client consultation process, significantly enhancing sales efficiency and client clarity.",
-      "The application features a comprehensive database of Medicare plans and an integrated tool for locating in-network doctors, providing immediate, data-driven value to clients.",
-      "Excelled in a high-volume, consultative sales environment, building rapport with and guiding 50-60 clients monthly through complex Medicare decisions.",
-      "Consistently achieved monthly sales targets by translating complex CMS data and product information into clear, actionable advice for clients."
+      "Closed 50–60 Medicare enrollments monthly at a 17–18% close rate, conducting 15–30 consultative calls daily and guiding clients through complex plan decisions during high-volume enrollment periods.",
+      "Designed and built a custom Django web application that ingests raw CMS plan data and distills it into clear, side-by-side comparisons — dramatically reducing time-to-recommendation when clients faced dozens of viable Medicare Advantage options.",
+      "Engineered a provider-network lookup tool that went beyond standard directory searches: when a client's doctor appeared out-of-network, the tool cross-referenced the practice location to surface in-network colleagues at the same office or confirm facility-level network participation — resolving network concerns live on the call instead of requiring follow-ups.",
+      "Translated complex CMS data and product rules into plain-language, actionable guidance, earning client trust in decisions with significant financial and healthcare consequences."
     ]
   },
   {
@@ -96,12 +96,6 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
-      "name": "CMS Data Analysis",
-      "experiences": [
-        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
-      ]
-    },
-    {
       "name": "CRM Development & Automation",
       "experiences": [
         "Branch Manager | Mortgage Loan Originator at West Capital Lending"
@@ -115,6 +109,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Data Ingestion & Processing (CMS Datasets)",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
       "name": "Database Management",
       "experiences": [
         "Licensed Medicare Agent at Huffman Medicare Consulting, LLC",
@@ -124,6 +124,7 @@ const SKILLS_BY_CATEGORY = {
     {
       "name": "Django / Python Development",
       "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC",
         "Branch Manager | Mortgage Loan Originator at West Capital Lending"
       ]
     },
@@ -148,7 +149,8 @@ const SKILLS_BY_CATEGORY = {
     {
       "name": "Process Automation",
       "experiences": [
-        "Strategic Consultant at Pikes Peak Property Management"
+        "Strategic Consultant at Pikes Peak Property Management",
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
       ]
     }
   ],
@@ -244,6 +246,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Provider Network Analysis",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
       "name": "Quantitative Analysis",
       "experiences": [
         "Futures Trader at Eldorado Trading"
@@ -301,9 +309,21 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "High-Volume Phone Sales (15–30 Calls Daily)",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
       "name": "Marketing Automation",
       "experiences": [
         "Branch Manager | Mortgage Loan Originator at West Capital Lending"
+      ]
+    },
+    {
+      "name": "Objection Handling & Closing",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
       ]
     },
     {
@@ -329,7 +349,8 @@ const SKILLS_BY_CATEGORY = {
     {
       "name": "Client Relationship Management",
       "experiences": [
-        "Branch Stock Broker at Scottrade"
+        "Branch Stock Broker at Scottrade",
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
       ]
     },
     {
@@ -364,6 +385,12 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Plain-Language Communication of Complex Products",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
       "name": "Public Speaking & Seminars",
       "experiences": [
         "Branch Stock Broker at Scottrade"
@@ -383,6 +410,12 @@ const SKILLS_BY_CATEGORY = {
     }
   ],
   "Financial": [
+    {
+      "name": "CMS Data & Compliance",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
     {
       "name": "ECOA & Federal Disclosure Timelines",
       "experiences": [
@@ -415,6 +448,18 @@ const SKILLS_BY_CATEGORY = {
       ]
     },
     {
+      "name": "Medicare Enrollment Periods (AEP / OEP / SEP)",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
+      "name": "Medicare Plan Expertise (Advantage, Medigap, Part D)",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
+    {
       "name": "Mortgage Loan Origination (Conventional, FHA, VA, Jumbo, Non-QM, DSCR, HELOC, Reverse)",
       "experiences": [
         "Branch Manager | Mortgage Loan Originator at West Capital Lending"
@@ -424,12 +469,6 @@ const SKILLS_BY_CATEGORY = {
       "name": "Portfolio Management",
       "experiences": [
         "Branch Stock Broker at Scottrade"
-      ]
-    },
-    {
-      "name": "Product Expertise (Medicare)",
-      "experiences": [
-        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
       ]
     },
     {
@@ -470,6 +509,12 @@ const SKILLS_BY_CATEGORY = {
     }
   ],
   "Licensing": [
+    {
+      "name": "AHIP Certification (Medicare)",
+      "experiences": [
+        "Licensed Medicare Agent at Huffman Medicare Consulting, LLC"
+      ]
+    },
     {
       "name": "NMLS-Licensed Mortgage Loan Originator (NMLS ID 2699104)",
       "experiences": [
